@@ -14,3 +14,42 @@ p {
   padding: 10px;
   margin: 2px !important;
 }
+
+.day {
+  background-color: #3333cc;
+  margin: 1px;
+}
+
+p.day {
+  background-color: #3333cc !important;
+  color: white;
+}
+
+h4.day {
+  color: white !important;
+}
+
+.extreme {
+  background-color: #9900cc;
+  color: white;
+}
+
+.veryHigh {
+  background-color: #cc0000;
+  color: white;
+}
+
+.high {
+  background-color: #ff6600;
+  color: white;
+}
+
+.moderate {
+  background-color: #ffcc00;
+  color: white;
+}
+
+.low {
+  background-color: #33cc33;
+  color: white;
+}
