@@ -26,6 +26,7 @@ function showPastHistory() {
 
 $(document).ready(() => {
   showPastHistory();
+
   $("#submit_search").click((e) => {
     e.preventDefault();
     let search = $("#search").val();
@@ -103,6 +104,8 @@ $(document).ready(() => {
               .addClass("low");
           }
         }
+
+        //Weather Icon Selector
 
         //Day 2 Weather
         $("#date1").text(moment().add(1, "days").format("l"));
