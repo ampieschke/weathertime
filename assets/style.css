@@ -1,0 +1,9 @@
+#topPart {
+  background-color: grey !important;
+  height: 60px;
+  text-align: center;
+}
+
+.citySearch {
+  border: 5px solid red !important;
+}
