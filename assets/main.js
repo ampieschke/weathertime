@@ -26,7 +26,6 @@ function showPastHistory() {
 
 $(document).ready(() => {
   showPastHistory();
-
   $("#submit_search").click((e) => {
     e.preventDefault();
     let search = $("#search").val();
