@@ -15,15 +15,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-    <div class="container" id="topPart">
-      <div class="row">
+    <header class="container" id="topPart">
         <h1>Weather Time Dashboard</h1>
-      </div>
-    </div>
+    </header>
+
+      <!-- CONTENT-->
     <div class="container">
       <div class="row">
         <!-- SEARCH BOX -->
-        <div class="col-4">
+        <div class="col-3" id="searchSect">
           <h4>Search for a City:</h4>
           <input id="search" name="search" />
           <button type="submit" class="btn btn-secondary" id="submit_search">
@@ -40,19 +40,29 @@
               />
             </svg>
           </button>
-          <div class="col-4" id="citySearch"></div>
+          <div class="col-12" id="citySearch"></div>
         </div>
 
         <!-- WEATHER BOARD -->
-        <div class="col-8" id="weatherBoard">
+        <div class="col-9" id="weatherBoard">
           <br />
           <h1><span id="location"></span></h1>
           <p><span id="description"></span></p>
-          <p>Temp: <span id="temp"></span></p>
-          <p>Humidity: <span id="humidity"></span></p>
-          <p>Wind: <span id="wind"></span></p>
-          <p>UV Index: <span id="uvi"></span></p>
+          <p><span id="temp"></span></p>
+          <p><span id="humidity"></span></p>
+          <p><span id="wind"></span></p>
+          <p><span id="uvi"></span></p>
           <!-- 5 DAY FORECAST -->
+          <div class="row" id="fiveDay">
+            <div class="col-1 day" id="dayTwo"></div>
+            <div class="col-1 day" id="dayThree"></div>
+            <div class="col-1 day" id="dayFour"></div>
+            <div class="col-1 day" id="dayFive"></div>
+            <div class="col-1 day" id="dayOne"></div>
+
+          </div>
+            
+          </row>
         </div>
       </div>
     </div>

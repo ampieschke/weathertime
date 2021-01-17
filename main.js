@@ -71,17 +71,17 @@ $(document).ready(() => {
         console.log(response);
 
         var fTemp = Math.floor((response.current.temp - 273.15) * 1.8 + 32);
-        $("#temp").text(fTemp + "Degrees");
+        $("#temp").text("Temp: " + fTemp + "Degrees");
         console.log(fTemp);
-        $("#humidity").text(response.current.humidity + "%");
+        $("#humidity").text("Humidity: " + response.current.humidity + "%");
         console.log(response.current.humidity);
-        $("#wind").text(response.current.wind_speed + "MPH");
+        $("#wind").text("Wind Speed: " + response.current.wind_speed + "MPH");
         console.log(response.current.wind_speed);
         $("#description").text(
-          "Current Weather:" + response.current.weather[0].main
+          "Current Weather: " + response.current.weather[0].main
         );
         console.log(response.current.weather[0].main);
-        $("#uvi").text(response.current.uvi);
+        $("#uvi").text("UV Index: " + response.current.uvi);
         console.log(response.current.uvi);
       });
     });

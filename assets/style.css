@@ -4,6 +4,13 @@
   text-align: center;
 }
 
-.citySearch {
-  border: 5px solid red !important;
+#searchSect {
+  background-color: lightgrey !important;
+}
+
+p {
+  background-color: white !important;
+  height: 30px;
+  padding: 10px;
+  margin: 2px !important;
 }
