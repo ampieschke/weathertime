@@ -1,3 +1,12 @@
+//enable pressing "enter" as hitting the search button
+let input = document.getElementById("search");
+input.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("submit_search").click();
+  }
+});
+
 function addToLocalStorage(save_value) {
   let search_key = "search_history";
   let search_history = localStorage.getItem(search_key);
@@ -8,7 +17,7 @@ function addToLocalStorage(save_value) {
     // Grab the value from the history array
     let past_hist = JSON.parse(search_history);
     // Push to the parsed array
-    past_hist.push(save_value);
+    past_hist.unshift(save_value);
     // restring the array
     let new_hist = JSON.stringify(past_hist);
     // store it
@@ -18,10 +27,22 @@ function addToLocalStorage(save_value) {
 
 function showPastHistory() {
   $("#citySearch").empty();
-  const hist = localStorage.getItem("search_history");
-  hist !== null
-    ? JSON.parse(hist).map((city) => $("#citySearch").prepend(`<p>${city}</p>`))
-    : "";
+  // const hist = localStorage.getItem("search_history");
+  // hist !== null
+  //   ? JSON.parse(hist).map((city) =>
+  //       $("#citySearch").append(`<h4>${city}</h4>`)
+  //     )
+  //   : "";
+
+  //slice the search history down to five
+  let recent_search = JSON.parse(localStorage.getItem("search_history"));
+  if (recent_search != null) {
+    var recent_hist = recent_search.slice(0, 5);
+    //print five most recent searches to html
+    for (let i = 0; i < recent_hist.length; i++) {
+      $("#citySearch").append(`<h4>${recent_hist[i]}</h4>`);
+    }
+  }
 }
 
 $(document).ready(() => {
