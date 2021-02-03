@@ -1,12 +1,3 @@
-//enable pressing "enter" as hitting the search button
-let input = document.getElementById("search");
-input.addEventListener("keyup", function (event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    document.getElementById("submit_search").click();
-  }
-});
-
 function addToLocalStorage(save_value) {
   let search_key = "search_history";
   let search_history = localStorage.getItem(search_key);
@@ -55,7 +46,7 @@ $(document).ready(() => {
     addToLocalStorage(search);
     showPastHistory();
     displayCityInfo();
-    $("#search").val("");
+    // $("#search").val("");
   });
 
   $(document).on("click", ".cityclick", function () {
@@ -110,6 +101,13 @@ $(document).ready(() => {
           "Current Weather: " + response.current.weather[0].main
         );
         $("#uvi").text("UV Index: " + response.current.uvi);
+
+        // Show Weather Icon
+        var iconcode = response.current.weather[0].icon;
+        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        $("#icon").append('<img id="wicon" src="" alt="Weather icon">');
+        $("#wicon").attr("src", iconurl);
+        console.log(iconurl);
         setUVClass();
         show_future();
 

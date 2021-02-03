@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
     integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style.css" />
+  <link rel="stylesheet" href="assets/style_b.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
@@ -29,11 +30,18 @@
       <!-- SEARCH BOX -->
 
       <div class="col-7" id="searchSect">
-        <h4>Search for a City:</h4>
-        <input id="search" name="search" />
-        <button type="submit" class="btn btn-secondary" id="submit_search">
-          <i class="fas fa-search-location"></i>
-        </button>
+
+        <div class="box">
+          <form>
+            <row>
+          <div class="input-container">
+            <input type="text" id="search" required=""/>
+            <label>Search a City</label>	<button type="submit" class="btn" id="submit_search"><i class="fas fa-search-location"></i></button>	
+            
+          </div>
+            
+        </form>	
+        </div>
 
         <!-- RECENT SEARCH DISPLAY-->
         <div class="d-grid gap-1" id="citySearch">
@@ -52,6 +60,7 @@
       <p><span id="humidity"></span></p>
       <p><span id="wind"></span></p>
       <p><span id="uvi"></span></p>
+      <div id="icon"></div>
 
       <!-- 5 DAY FORECAST -->
       <div id="fdf"></div>

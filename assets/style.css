@@ -2,6 +2,7 @@
 #searchSect {
   background-color: lightgrey !important;
   height: 400px;
+  padding: 10px;
 
 }
 
@@ -67,7 +68,13 @@ justify-content: center;
 
 .btn {
   background-color:#95C3F3 !important;
-  border:  #95C3F3 !important;;
+  color:#fff;
+	outline: none;
+	padding:10px 20px;
+	text-transform:uppercase;
+	border:none;
+	cursor:pointer;
+	position:relative;
 }
 
 #citySearch {
