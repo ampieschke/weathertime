@@ -69,3 +69,7 @@ justify-content: center;
   background-color:#95C3F3 !important;
   border:  #95C3F3 !important;;
 }
+
+#citySearch {
+  margin-top: 10px;
+}
