@@ -1,32 +1,43 @@
-#topPart {
-  background-color: grey !important;
-  height: 60px;
-  text-align: center;
-}
 
 #searchSect {
   background-color: lightgrey !important;
+  height: 400px;
+
+}
+
+#skybar {
+
+  background-image: url("bluesky.jpg");
+  background-repeat: no-repeat;
+  float: left;
+}
+
+h1{
+  padding: 15px;
 }
 
 p {
-  background-color: white !important;
   height: 30px;
   padding: 10px;
   margin: 2px !important;
 }
 
 .day {
-  background-color: #3333cc;
+  background-color: #95C3F3;
   margin: 1px;
 }
 
 p.day {
-  background-color: #3333cc !important;
+  background-color: #95C3F3 !important;
   color: white;
 }
 
 h4.day {
   color: white !important;
+}
+
+#fiveDay{
+justify-content: center;
 }
 
 .extreme {
