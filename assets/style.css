@@ -36,7 +36,7 @@ h4.day {
   color: white !important;
 }
 
-#fiveDay{
+#fiveDays{
 justify-content: center;
 }
 
@@ -63,4 +63,9 @@ justify-content: center;
 .low {
   background-color: #33cc33;
   color: white;
+}
+
+.btn {
+  background-color:#95C3F3 !important;
+  border:  #95C3F3 !important;;
 }

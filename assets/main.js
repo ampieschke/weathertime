@@ -40,7 +40,9 @@ function showPastHistory() {
     var recent_hist = recent_search.slice(0, 5);
     //print five most recent searches to html
     for (let i = 0; i < recent_hist.length; i++) {
-      $("#citySearch").append(`<h4>${recent_hist[i]}</h4>`);
+      $("#citySearch").append(
+        `<button class="cityclick btn btn-primary"type="button"value="${recent_hist[i]}">${recent_hist[i]}</button>`
+      );
     }
   }
 }
@@ -54,6 +56,15 @@ $(document).ready(() => {
     showPastHistory();
     displayCityInfo();
     $("#search").val("");
+  });
+
+  $(document).on("click", ".cityclick", function () {
+    let city = $(this).attr("value");
+    addToLocalStorage(city);
+    showPastHistory();
+    displayCityInfo();
+    $(".cityclick").val("");
+    console.log(city);
   });
 
   function displayCityInfo() {
@@ -142,7 +153,7 @@ $(document).ready(() => {
               .format("l");
 
             $("#fiveDays").append(`
-              <div class="col day">
+              <div class="col-12 col-lg-2 day">
               <h4 class = "day">${date}</h2>
               <p class = "day">${fTemp} Degrees</p>
               <p class = "day">Humidity: ${humi}%</p>
