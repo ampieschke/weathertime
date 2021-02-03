@@ -53,6 +53,7 @@ $(document).ready(() => {
     addToLocalStorage(search);
     showPastHistory();
     displayCityInfo();
+    $("#search").val("");
   });
 
   function displayCityInfo() {
@@ -128,6 +129,8 @@ $(document).ready(() => {
 
         function show_future() {
           // Print out five days with appropriate formating classes
+          $("#fdf").empty();
+          $("#fiveDays").empty();
           $("#fdf").append(`<h2>Five Day Forecast:</h2>`);
           for (let i = 0; i < 5; i++) {
             let fTemp = Math.floor(
